@@ -1,8 +1,8 @@
-
 from csvFuncs import CSVFuncs
 
 import os
 from getpass import getpass
+from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -77,12 +77,8 @@ class BlackboardScraper:
             
             # Iterate over all the due items (assignments, tests, etc) within this date container
             for due_item in due_items:
-                
                 element_image = due_item.find_element(By.CLASS_NAME, "element-image")
-                # Find bb-ui-content-icon first
                 icon_container = element_image.find_element(By.TAG_NAME, "bb-ui-content-icon")
-                
-                # Wait for the ng-switch div to be present
                 ng_switch_div = icon_container.find_element(By.CSS_SELECTOR, "div[ng-switch]")
                 
                 try:
@@ -95,14 +91,17 @@ class BlackboardScraper:
                     # Get the type from the tag name by removing the prefix
                     tag_name = icon_element.tag_name
                     assignment_type = tag_name.replace('bb-ui-icon-large-', '')
-                    print(f"Assignment Type: {assignment_type}")
                 except:
                     assignment_type = "unknown"
                     print("Could not determine assignment type")
                      
 
-                element_details = due_item.find_element(By.CLASS_NAME, "element-details")
+
+
+
                 # Getting info of assignment
+                element_details = due_item.find_element(By.CLASS_NAME, "element-details")
+
                 assignment_name = element_details.find_element(
                     By.CSS_SELECTOR, 
                     ".name a"
@@ -119,12 +118,93 @@ class BlackboardScraper:
                     "a"
                 ).text
 
-                assignments.append({
-                    "course_name": course_name,
-                    "assignment_name": assignment_name,
-                    "due_time": due_time,
-                    "assignment_type": assignment_type
-                })
+                
+
+                try:
+                    # First check if there's a clickable link in the element details
+                    link = element_details.find_element(By.CSS_SELECTOR, ".name a")
+                    is_clickable = link.is_enabled() and link.is_displayed()
+                    
+                    if is_clickable:
+                        print(f"Assignment '{assignment_name}' is clickable")
+                        link.click()
+                        
+                        sleep(2)  # wait for the panel to load
+                        
+                        # Initialize grading variables
+                        is_graded = False
+                        max_points = None
+                        
+                        # Check for grading information
+                        try:
+                            grading_section = self.driver.find_element(By.CLASS_NAME, "no-submission-card")
+                            if "Maximum points" in grading_section.text:  # Changed from "Grading" to "Maximum points"
+                                is_graded = True
+                                # Find the points element using the correct path
+                                points_element = grading_section.find_element(
+                                    By.CSS_SELECTOR, 
+                                    ".no-submission-value span bdi"
+                                )
+                                max_points = float(points_element.text)
+                                print(f"Found max points: {max_points} for '{assignment_name}'")
+                        except Exception as e:
+                            print(f"No grading information found for '{assignment_name}': {str(e)}")
+                        
+                        # Check for footer and take screenshot
+                        try:
+                            footer = self.driver.find_element(By.ID, "start-attempt-footer")
+                            footer_link = footer.find_element(By.TAG_NAME, "a")
+                            if footer_link.is_displayed() and footer_link.is_enabled():
+                                footer_link.click()
+                                sleep(2)
+                        except:
+                            print(f"No footer found for '{assignment_name}'")
+                        
+                        # Take screenshot
+                        screenshot_name = f"screenshots/{assignment_name.replace(' ', '_')}.png"
+                        os.makedirs("screenshots", exist_ok=True)
+                        self.driver.save_screenshot(screenshot_name)
+                        print(f"Screenshot saved as {screenshot_name}")
+
+                        # Close the panel
+                        close_button = self.wait.until(
+                            EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bb-close"))
+                        )
+                        close_button.click()
+                        
+                        # Add grading information to the assignment dictionary
+                        assignments.append({
+                            "course_name": course_name,
+                            "assignment_name": assignment_name,
+                            "due_time": due_time,
+                            "assignment_type": assignment_type,
+                            "is_clickable": is_clickable,
+                            "is_graded": is_graded,
+                            "max_points": max_points
+                        })
+                    else:
+                        print(f"Assignment '{assignment_name}' is not clickable")
+                        assignments.append({
+                            "course_name": course_name,
+                            "assignment_name": assignment_name,
+                            "due_time": due_time,
+                            "assignment_type": assignment_type,
+                            "is_clickable": is_clickable,
+                            "is_graded": False,
+                            "max_points": None
+                        })
+                except Exception as e:
+                    print(f"Assignment '{assignment_name}' is not clickable (no link found)")
+                    print(f"Error: {str(e)}")
+                    assignments.append({
+                        "course_name": course_name,
+                        "assignment_name": assignment_name,
+                        "due_time": due_time,
+                        "assignment_type": assignment_type,
+                        "is_clickable": False,
+                        "is_graded": False,
+                        "max_points": None
+                    })
 
         
 

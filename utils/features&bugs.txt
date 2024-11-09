@@ -14,8 +14,9 @@ FEATURES:
 - Select profile from chrome
 - Add link in notes for all csv info
 9) Remove notes automatically after 7 days of existance
-10) Dont send screenshot as query but rather send readed text
-11) Filter by priotity
+10) Dont send screenshot as q
+12) Graded or not
+13) Dont use sleep, just wait until its loaded 
 
 
 
