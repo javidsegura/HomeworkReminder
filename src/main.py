@@ -43,7 +43,7 @@ class BlackboardScraper:
         
         input("Press Enter after you've completed the MFA verification: ")
       
-    def get_calendar_data(self):
+    def scrapData(self):
         """ scap hw assignments"""        
 
         print("--------------------------------")
@@ -67,17 +67,42 @@ class BlackboardScraper:
             "//div[starts-with(@id, 'bb-calendar1-deadlines-')]"
         )
         
+        # Iterate over all the deadline containers
         assignments = []
-        for container in deadline_containers:
-            # Get all due items within this date container
+        for container in deadline_containers: 
             due_items = container.find_elements(
                 By.CSS_SELECTOR, 
                 ".due-item-block .element-card-container .element-card.due-item"
             )
             
+            # Iterate over all the due items (assignments, tests, etc) within this date container
             for due_item in due_items:
-                element_details = due_item.find_element(By.CLASS_NAME, "element-details")
                 
+                element_image = due_item.find_element(By.CLASS_NAME, "element-image")
+                # Find bb-ui-content-icon first
+                icon_container = element_image.find_element(By.TAG_NAME, "bb-ui-content-icon")
+                
+                # Wait for the ng-switch div to be present
+                ng_switch_div = icon_container.find_element(By.CSS_SELECTOR, "div[ng-switch]")
+                
+                try:
+                    # Look for any element whose tag name starts with bb-ui-icon-large- inside ng-switch div
+                    icon_element = ng_switch_div.find_element(
+                        By.XPATH, 
+                        ".//*[starts-with(local-name(), 'bb-ui-icon-large-')]"
+                    )
+                    
+                    # Get the type from the tag name by removing the prefix
+                    tag_name = icon_element.tag_name
+                    assignment_type = tag_name.replace('bb-ui-icon-large-', '')
+                    print(f"Assignment Type: {assignment_type}")
+                except:
+                    assignment_type = "unknown"
+                    print("Could not determine assignment type")
+                     
+
+                element_details = due_item.find_element(By.CLASS_NAME, "element-details")
+                # Getting info of assignment
                 assignment_name = element_details.find_element(
                     By.CSS_SELECTOR, 
                     ".name a"
@@ -97,8 +122,11 @@ class BlackboardScraper:
                 assignments.append({
                     "course_name": course_name,
                     "assignment_name": assignment_name,
-                    "due_time": due_time
+                    "due_time": due_time,
+                    "assignment_type": assignment_type
                 })
+
+        
 
         return assignments
 
@@ -119,7 +147,7 @@ def main():
     try:
         scraper.login(username, password)
         scraper.csv_funcs.start_csv()
-        data = scraper.get_calendar_data()
+        data = scraper.scrapData()
         for assignment in data:
             scraper.csv_funcs.append_to_csv(assignment)
         print("CSV created successfully!")
