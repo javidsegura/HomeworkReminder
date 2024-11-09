@@ -1,0 +1,9 @@
+**Milestone 2: Status Update Summary**
+
+This assignment requires a progress update in a .pptx format focusing on backend development using Azure technologies. Key elements to demonstrate include:
+
+1. **Azure Functions**: Show functionality with a MySQL database for managing expense data.
+2. **Azure Blobs**: Provide a technical explanation of how Blobs store receipts.
+3. **Optional**: Implement Azure Queue as a Dead Letter Queue for handling incorrect requests.
+
+All scripts or notebooks used must be attached to the submission, and a private GitHub repository can be referenced. The grading rubric allocates points for Azure Function integration (20%), Blob Storage integration (10%), and an optional feature (5%). The submission deadline is November 24, 2024.

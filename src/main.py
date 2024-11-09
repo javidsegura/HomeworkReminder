@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from ai_prompt import summarize_content
 
 class BlackboardScraper:
     def __init__(self):
@@ -171,6 +172,9 @@ class BlackboardScraper:
                             EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bb-close"))
                         )
                         close_button.click()
+
+                        os.makedirs("summaries", exist_ok=True)
+                        summarize_content(assignment_name, screenshot_name, f"summaries/{assignment_name.replace(' ', '_')}.txt")
                         
                         # Add grading information to the assignment dictionary
                         assignments.append({

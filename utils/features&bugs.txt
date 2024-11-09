@@ -17,6 +17,7 @@ FEATURES:
 10) Dont send screenshot as q
 12) Graded or not
 13) Dont use sleep, just wait until its loaded 
+14) Summaries should be done at the end and not at each iteration 
 
 
 

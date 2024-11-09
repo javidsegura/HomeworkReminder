@@ -1,0 +1,6 @@
+The content outlines a homework assignment for an "Introduction to Azure Logic Apps" course. It includes two questions: 
+
+1. Complete a training module on Azure Logic Apps and provide a screenshot showing your username.
+2. Create a Logic App to connect Azure Queues with Azure Blobs, processing new queue messages and moving them to an Azure Blob container using the "Logic App Designer."
+
+The assignment is due on November 15, 2024, with a maximum score of 10 points and two submission attempts allowed.
