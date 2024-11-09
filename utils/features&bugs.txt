@@ -12,6 +12,10 @@ FEATURES:
 - Daemon like style  
 - Write to notes (0)
 - Select profile from chrome
+- Add link in notes for all csv info
+9) Remove notes automatically after 7 days of existance
+10) Dont send screenshot as query but rather send readed text
+11) Filter by priotity
 
 
 
@@ -20,6 +24,6 @@ BUGS:
 
 
 IDEA:
-- Two modes.
-      a) Locally homework list
-      b) Spreadsheet with complete control (useful for groups) 
+- One single mode: scan the assignment => take screenshot => make API call to summarize => send email with all info
+
+- Take screenshot only if clickable 
