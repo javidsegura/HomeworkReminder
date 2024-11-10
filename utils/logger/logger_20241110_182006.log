@@ -1,0 +1,23 @@
+2024-11-10 18:20:06 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 18:20:07 - INFO - Cookies loaded successfully
+2024-11-10 18:20:09 - INFO - Cookies expired, proceeding with normal login
+2024-11-10 18:20:20 - ERROR - Error logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010298d5dc cxxbridge1$str$ptr + 3653648
+1   chromedriver                        0x0000000102985e3c cxxbridge1$str$ptr + 3623024
+2   chromedriver                        0x00000001023f0100 cxxbridge1$string$len + 88404
+3   chromedriver                        0x000000010243241c cxxbridge1$string$len + 359536
+4   chromedriver                        0x000000010246bba8 cxxbridge1$string$len + 594940
+5   chromedriver                        0x00000001024270fc cxxbridge1$string$len + 313680
+6   chromedriver                        0x0000000102427d4c cxxbridge1$string$len + 316832
+7   chromedriver                        0x000000010295864c cxxbridge1$str$ptr + 3436672
+8   chromedriver                        0x000000010295b988 cxxbridge1$str$ptr + 3449788
+9   chromedriver                        0x000000010293fa5c cxxbridge1$str$ptr + 3335312
+10  chromedriver                        0x000000010295c24c cxxbridge1$str$ptr + 3452032
+11  chromedriver                        0x0000000102930ce8 cxxbridge1$str$ptr + 3274524
+12  chromedriver                        0x00000001029769dc cxxbridge1$str$ptr + 3560464
+13  chromedriver                        0x0000000102976b58 cxxbridge1$str$ptr + 3560844
+14  chromedriver                        0x0000000102985ad4 cxxbridge1$str$ptr + 3622152
+15  libsystem_pthread.dylib             0x00000001866df034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001866d9e3c thread_start + 8
+

@@ -29,6 +29,8 @@ class CSVFuncs:
     def check_add(self, course_name: str, assignment_name: str) -> bool:
         """ check if the assignment already exists in the csv"""
         if self.df is not None:
+            print(course_name, assignment_name)
+            print(self.df[(self.df['course_name'] == course_name) & (self.df['assignment_name'] == assignment_name)])
             return self.df[(self.df['course_name'] == course_name) & (self.df['assignment_name'] == assignment_name)].empty # True if not exists, false if exists
         raise ValueError("DataFrame is not initialized")
     

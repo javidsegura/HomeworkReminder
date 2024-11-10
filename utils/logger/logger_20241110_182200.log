@@ -1,0 +1,55 @@
+2024-11-10 18:22:00 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 18:22:04 - INFO - Cookies saved successfully
+2024-11-10 18:22:20 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 18:22:20 - INFO - 
+2024-11-10 18:22:20 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 18:22:24 - INFO - 	=> Finished scraping assignment: Selenium Contest
+
+2024-11-10 18:22:24 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 18:22:24 - INFO - 
+2024-11-10 18:22:24 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 18:22:29 - INFO - 	=> Finished scraping assignment: Aggregation Framework Second Exercises
+
+2024-11-10 18:22:29 - INFO - 
+2024-11-10 18:22:29 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 18:22:34 - INFO - 	=> Finished scraping assignment: Spark Assignment
+
+2024-11-10 18:22:34 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 18:22:34 - INFO - 
+2024-11-10 18:22:34 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 18:22:38 - INFO - 	=> Finished scraping assignment: Low Code Databases: Airtable
+
+2024-11-10 18:22:38 - INFO - 
+=> SCRAPING DATE: Due date: 11/15/24, 11:59 PM
+2024-11-10 18:22:38 - INFO - 
+2024-11-10 18:22:38 - INFO - 	=> Scraping: Introduction to Azure Logic Apps
+2024-11-10 18:22:43 - INFO - 	=> Finished scraping assignment: Introduction to Azure Logic Apps
+
+2024-11-10 18:22:43 - INFO - 
+=> SCRAPING DATE: Due date: 11/18/24, 11:59 PM
+2024-11-10 18:22:43 - INFO - 
+2024-11-10 18:22:43 - INFO - 	=> Scraping: Getting Starting with Serverless Badge
+2024-11-10 18:22:45 - WARNING - 	!> No grading information found for 'Getting Starting with Serverless Badge'
+2024-11-10 18:22:45 - WARNING - 	!> No footer found for 'Getting Starting with Serverless Badge. Can't access the assignment page.
+2024-11-10 18:22:45 - INFO - 	=> Finished scraping assignment: Getting Starting with Serverless Badge
+
+2024-11-10 18:22:45 - INFO - 
+=> SCRAPING DATE: Due date: 11/21/24, 9:00 AM
+2024-11-10 18:22:45 - INFO - 
+2024-11-10 18:22:46 - INFO - 	=> Scraping: Quiz 3
+2024-11-10 18:22:47 - WARNING - 	!> Assignment 'Quiz 3' could not be opened
+2024-11-10 18:22:47 - INFO - 	=> Finished scraping assignment: Quiz 3
+
+2024-11-10 18:22:47 - INFO - 
+=> SCRAPING DATE: Due date: 11/24/24, 11:59 PM
+2024-11-10 18:22:47 - INFO - 
+2024-11-10 18:22:47 - INFO - 	=> Scraping: Milestone 2: Status Update - Backend Progress and Azure Storage
+2024-11-10 18:22:51 - INFO - 	=> Finished scraping assignment: Milestone 2: Status Update - Backend Progress and Azure Storage
+
+2024-11-10 18:22:51 - INFO - 
+=> SCRAPING DATE: Due date: 11/28/24, 11:59 PM
+2024-11-10 18:22:51 - INFO - 
+2024-11-10 18:22:51 - INFO - 	=> Scraping: Boardgame Groupwork

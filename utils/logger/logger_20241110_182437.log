@@ -1,0 +1,25 @@
+2024-11-10 18:24:37 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 18:24:41 - INFO - Cookies saved successfully
+2024-11-10 18:24:54 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 18:24:54 - INFO - 
+2024-11-10 18:24:54 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 18:24:58 - INFO - 	=> Finished scraping assignment: Selenium Contest
+
+2024-11-10 18:24:58 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 18:24:58 - INFO - 
+2024-11-10 18:24:58 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 18:25:03 - INFO - 	=> Finished scraping assignment: Aggregation Framework Second Exercises
+
+2024-11-10 18:25:03 - INFO - 
+2024-11-10 18:25:03 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 18:25:08 - INFO - 	=> Finished scraping assignment: Spark Assignment
+
+2024-11-10 18:25:08 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 18:25:08 - INFO - 
+2024-11-10 18:25:08 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 18:25:11 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(54, 'Connection reset by peer')': /session/3dc0d0014ec4102b4af2b1930718de59
+2024-11-10 18:25:11 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1062f8790>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/3dc0d0014ec4102b4af2b1930718de59
+2024-11-10 18:25:11 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1066f5bd0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/3dc0d0014ec4102b4af2b1930718de59

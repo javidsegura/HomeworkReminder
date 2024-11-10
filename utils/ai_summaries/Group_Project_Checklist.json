@@ -1,1 +1,1 @@
-{"summary":"Confirm your group's access to specific resources like the Azure Resource Group and Lab VM. Ensure the successful completion of tasks related to Azure Storage and Azure Functions as listed in the checklist.","estimated_time":"2 hours","difficulty":3}
+{"summary":"Confirm your ability to run the specified notebook and execute CRUD operations on the assigned MySQL database. Additionally, verify your access to the Azure Resource Group and the Lab VM using provided credentials.","estimated_time":"2-3 hours","difficulty":2}

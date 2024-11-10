@@ -6,6 +6,8 @@ import os
 from getpass import getpass
 import time
 import logging
+import pickle
+import pathlib
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -15,13 +17,41 @@ from selenium.webdriver.common.keys import Keys
 
 
 class BlackboardScraper:
-    def __init__(self):
+    def __init__(self, username: str):
         self.driver = webdriver.Chrome()  
         self.wait = WebDriverWait(self.driver, 10)
         self.csv_funcs = CSVFuncs()
         os.makedirs("utils/ai_summaries", exist_ok=True)
         os.makedirs("utils/screenshots", exist_ok=True)
         os.makedirs("utils/logger", exist_ok=True)
+        os.makedirs("utils/cookies", exist_ok=True)
+        os.makedirs("utils/csv", exist_ok=True)
+        self.cookies_path = pathlib.Path(f"utils/cookies/{username}_cookies.pkl")
+    
+    def save_cookies(self):
+        """Save the current session cookies"""
+        with open(self.cookies_path, 'wb') as file:
+            pickle.dump(self.driver.get_cookies(), file)
+            msg = "Cookies saved successfully"
+            print(msg)
+            logging.info(msg)
+
+    def load_cookies(self):
+        """Load saved cookies if they exist"""
+        try:
+            with open(self.cookies_path, 'rb') as file:
+                cookies = pickle.load(file)
+                for cookie in cookies:
+                    self.driver.add_cookie(cookie)
+                msg = "Cookies loaded successfully"
+                print(msg)
+                logging.info(msg)
+                return True
+        except FileNotFoundError:
+            msg = "No saved cookies found"
+            print(msg)
+            logging.info(msg)
+            return False
 
     def set_up_logger(self):
         """Set up logging configuration"""
@@ -38,7 +68,28 @@ class BlackboardScraper:
 
     def login(self, username, password):
         """ pass throught the login page (MFA)"""
+
+        """self.driver.get("https://blackboard.ie.edu")  # First load the base domain for cookies
         
+        # If user already logged in, try to use cookies
+        if self.load_cookies():
+            self.driver.get("https://blackboard.ie.edu/ultra/calendar")
+            try:
+                # Check if we're still logged in
+                calendar_container = self.wait.until(
+                    EC.presence_of_element_located((By.ID, "main-content")),
+                    timeout=5
+                )
+                msg = "Successfully logged in using cookies"
+                print(msg)
+                logging.info(msg)
+                return
+            except Exception:
+                msg = "Cookies expired, proceeding with normal login"
+                print(msg)
+                logging.info(msg)"""
+                
+        # No cookies found, proceed with normal login
         try:
             self.driver.get("https://blackboard.ie.edu/ultra/calendar")
         
@@ -58,6 +109,8 @@ class BlackboardScraper:
                 EC.element_to_be_clickable((By.ID, "idSIButton9"))
             )
             submit_button.click()
+            self.save_cookies()
+
         except Exception as e:
             msg = f"Error logging in: {e}"
             print(msg)
@@ -167,6 +220,12 @@ class BlackboardScraper:
                     "a"
                 ).text
 
+                # Remove the first word from the course name    
+                for char in range(len(course_name)):
+                    if course_name[char] == " ":
+                        course_name = course_name[char+1:]
+                        break
+
                 # If the assignment was already scraping, skip it 
                 checking = self.csv_funcs.check_add(course_name, assignment_name) # returns true if u can write
                 if not checking:
@@ -174,12 +233,7 @@ class BlackboardScraper:
                     print(msg)
                     logging.warning(msg)
                     continue
-
-                # Remove the first word from the course name    
-                for char in range(len(course_name)):
-                    if course_name[char] == " ":
-                        course_name = course_name[char+1:]
-                        break
+                print(f"CHECKING {checking}")
 
                 is_graded = False
                 max_points = "N/A"
@@ -218,7 +272,7 @@ class BlackboardScraper:
                             footer_link = footer.find_element(By.TAG_NAME, "a")
                             if footer_link.is_displayed() and footer_link.is_enabled():
                                 footer_link.click()
-                                time.sleep(1.5) # Give it some time to load the page
+                                time.sleep(2) # Give it some time to load the page
                             # Take screenshot
                             screenshot_name = f"utils/screenshots/{assignment_name.replace(' ', '_')}.png"
                             self.driver.save_screenshot(screenshot_name)
@@ -303,14 +357,14 @@ def main():
     if not password:
         password = getpass("Enter your Blackboard password: ")
     
-    scraper = BlackboardScraper()
+    scraper = BlackboardScraper(username)
     scraper.set_up_logger()
 
     notifier = EmailNotify(credentials_file="utils/OAuth/credentials.json")
 
     try:
         scraper.login(username, password)
-        scraper.csv_funcs.start_csv()
+        df = scraper.csv_funcs.start_csv()
         data = scraper.scrapData()
         for assignment in data:
             if assignment["screenshot_name"] != "N/A": # I only want to summarize assignments that have a screenshot (for now)

@@ -1,0 +1,150 @@
+2024-11-10 18:11:24 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 18:11:25 - INFO - No saved cookies found
+2024-11-10 18:11:29 - INFO - Cookies saved successfully
+2024-11-10 18:11:45 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 18:11:45 - INFO - 
+2024-11-10 18:11:45 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 18:11:49 - INFO - 	=> Finished scraping assignment: Selenium Contest
+
+2024-11-10 18:11:49 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 18:11:49 - INFO - 
+2024-11-10 18:11:49 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 18:11:54 - INFO - 	=> Finished scraping assignment: Aggregation Framework Second Exercises
+
+2024-11-10 18:11:54 - INFO - 
+2024-11-10 18:11:54 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 18:11:58 - INFO - 	=> Finished scraping assignment: Spark Assignment
+
+2024-11-10 18:11:59 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 18:11:59 - INFO - 
+2024-11-10 18:11:59 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 18:12:03 - INFO - 	=> Finished scraping assignment: Low Code Databases: Airtable
+
+2024-11-10 18:12:03 - INFO - 
+=> SCRAPING DATE: Due date: 11/15/24, 11:59 PM
+2024-11-10 18:12:03 - INFO - 
+2024-11-10 18:12:03 - INFO - 	=> Scraping: Introduction to Azure Logic Apps
+2024-11-10 18:12:08 - INFO - 	=> Finished scraping assignment: Introduction to Azure Logic Apps
+
+2024-11-10 18:12:08 - INFO - 
+=> SCRAPING DATE: Due date: 11/18/24, 11:59 PM
+2024-11-10 18:12:08 - INFO - 
+2024-11-10 18:12:08 - INFO - 	=> Scraping: Getting Starting with Serverless Badge
+2024-11-10 18:12:10 - WARNING - 	!> No grading information found for 'Getting Starting with Serverless Badge'
+2024-11-10 18:12:10 - WARNING - 	!> No footer found for 'Getting Starting with Serverless Badge. Can't access the assignment page.
+2024-11-10 18:12:11 - INFO - 	=> Finished scraping assignment: Getting Starting with Serverless Badge
+
+2024-11-10 18:12:11 - INFO - 
+=> SCRAPING DATE: Due date: 11/21/24, 9:00 AM
+2024-11-10 18:12:11 - INFO - 
+2024-11-10 18:12:11 - INFO - 	=> Scraping: Quiz 3
+2024-11-10 18:12:12 - WARNING - 	!> Assignment 'Quiz 3' could not be opened
+2024-11-10 18:12:12 - INFO - 	=> Finished scraping assignment: Quiz 3
+
+2024-11-10 18:12:12 - INFO - 
+=> SCRAPING DATE: Due date: 11/24/24, 11:59 PM
+2024-11-10 18:12:12 - INFO - 
+2024-11-10 18:12:12 - INFO - 	=> Scraping: Milestone 2: Status Update - Backend Progress and Azure Storage
+2024-11-10 18:12:16 - INFO - 	=> Finished scraping assignment: Milestone 2: Status Update - Backend Progress and Azure Storage
+
+2024-11-10 18:12:16 - INFO - 
+=> SCRAPING DATE: Due date: 11/28/24, 11:59 PM
+2024-11-10 18:12:16 - INFO - 
+2024-11-10 18:12:16 - INFO - 	=> Scraping: Boardgame Groupwork
+2024-11-10 18:12:19 - WARNING - 	!> No footer found for 'Boardgame Groupwork. Can't access the assignment page.
+2024-11-10 18:12:19 - INFO - 	=> Finished scraping assignment: Boardgame Groupwork
+
+2024-11-10 18:12:19 - INFO - 
+=> SCRAPING DATE: Due date: 12/5/24, 11:59 PM
+2024-11-10 18:12:19 - INFO - 
+2024-11-10 18:12:19 - INFO - 	=> Scraping: Final Project
+2024-11-10 18:12:23 - INFO - 	=> Finished scraping assignment: Final Project
+
+2024-11-10 18:12:23 - INFO - 
+=> SCRAPING DATE: Due date: 12/8/24, 11:59 PM
+2024-11-10 18:12:23 - INFO - 
+2024-11-10 18:12:23 - INFO - 	=> Scraping: Milestone 3: Final Presentation and Demo
+2024-11-10 18:12:28 - INFO - 	=> Finished scraping assignment: Milestone 3: Final Presentation and Demo
+
+2024-11-10 18:12:28 - INFO - 
+2024-11-10 18:12:28 - INFO - 	=> Scraping: Group Project Checklist
+2024-11-10 18:12:33 - INFO - 	=> Finished scraping assignment: Group Project Checklist
+
+2024-11-10 18:12:33 - INFO - 
+=> SCRAPING DATE: Due date: 12/10/24, 4:22 PM
+2024-11-10 18:12:33 - INFO - 
+2024-11-10 18:12:33 - INFO - 	=> Scraping: Extra Points
+2024-11-10 18:12:34 - WARNING - 	!> Assignment 'Extra Points' could not be opened
+2024-11-10 18:12:34 - INFO - 	=> Finished scraping assignment: Extra Points
+
+2024-11-10 18:12:34 - INFO - 
+=> SCRAPING DATE: Due date: 12/13/24, 12:59 PM
+2024-11-10 18:12:34 - INFO - 
+2024-11-10 18:12:34 - INFO - 	=> Scraping: Sky Computing
+2024-11-10 18:12:36 - WARNING - 	!> No grading information found for 'Sky Computing'
+2024-11-10 18:12:36 - WARNING - 	!> No footer found for 'Sky Computing. Can't access the assignment page.
+2024-11-10 18:12:36 - INFO - 	=> Finished scraping assignment: Sky Computing
+
+2024-11-10 18:12:36 - INFO - 
+2024-11-10 18:12:36 - INFO - 	=> Scraping: The role of containers in Cloud environments
+2024-11-10 18:12:39 - WARNING - 	!> No grading information found for 'The role of containers in Cloud environments'
+2024-11-10 18:12:39 - WARNING - 	!> No footer found for 'The role of containers in Cloud environments. Can't access the assignment page.
+2024-11-10 18:12:39 - INFO - 	=> Finished scraping assignment: The role of containers in Cloud environments
+
+2024-11-10 18:12:39 - INFO - 
+2024-11-10 18:12:39 - INFO - 	=> Scraping: The Environmental Impact of Data Centers and the Quest for New Energy Solutions
+2024-11-10 18:12:41 - WARNING - 	!> No grading information found for 'The Environmental Impact of Data Centers and the Quest for New Energy Solutions'
+2024-11-10 18:12:41 - WARNING - 	!> No footer found for 'The Environmental Impact of Data Centers and the Quest for New Energy Solutions. Can't access the assignment page.
+2024-11-10 18:12:41 - INFO - 	=> Finished scraping assignment: The Environmental Impact of Data Centers and the Quest for New Energy Solutions
+
+2024-11-10 18:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 12/17/24, 10:00 AM
+2024-11-10 18:12:41 - INFO - 
+2024-11-10 18:12:41 - INFO - 	=> Scraping: Final Exam
+2024-11-10 18:12:42 - WARNING - 	!> Assignment 'Final Exam' could not be opened
+2024-11-10 18:12:42 - INFO - 	=> Finished scraping assignment: Final Exam
+
+2024-11-10 18:12:42 - INFO - 
+=> SCRAPING DATE: Due date: 3/20/25, 11:59 PM
+2024-11-10 18:12:42 - INFO - 
+2024-11-10 18:12:42 - INFO - 	=> Scraping: STEP 1: Introduction to T&C
+2024-11-10 18:12:47 - INFO - 	=> Finished scraping assignment: STEP 1: Introduction to T&C
+
+2024-11-10 18:12:47 - INFO - 
+2024-11-10 18:12:47 - INFO - 	=> Scraping: STEP 3: Internship Search
+2024-11-10 18:12:52 - INFO - 	=> Finished scraping assignment: STEP 3: Internship Search
+
+2024-11-10 18:12:52 - INFO - 
+2024-11-10 18:12:52 - INFO - 	=> Scraping: STEP 4: Recruitment Process Step-by-step
+2024-11-10 18:12:56 - INFO - 	=> Finished scraping assignment: STEP 4: Recruitment Process Step-by-step
+
+2024-11-10 18:12:56 - INFO - Summarizing Selenium Contest
+2024-11-10 18:13:00 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:01 - INFO - Summarizing Aggregation Framework Second Exercises
+2024-11-10 18:13:04 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:05 - INFO - Summarizing Spark Assignment
+2024-11-10 18:13:12 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:13 - INFO - Summarizing Low Code Databases: Airtable
+2024-11-10 18:13:17 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:17 - INFO - Summarizing Introduction to Azure Logic Apps
+2024-11-10 18:13:21 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:23 - INFO - Summarizing Milestone 2: Status Update - Backend Progress and Azure Storage
+2024-11-10 18:13:26 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:27 - INFO - Summarizing Final Project
+2024-11-10 18:13:30 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:31 - INFO - Summarizing Milestone 3: Final Presentation and Demo
+2024-11-10 18:13:37 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:38 - INFO - Summarizing Group Project Checklist
+2024-11-10 18:13:42 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:45 - INFO - Summarizing STEP 1: Introduction to T&C
+2024-11-10 18:13:49 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:50 - INFO - Summarizing STEP 3: Internship Search
+2024-11-10 18:13:54 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:54 - INFO - Summarizing STEP 4: Recruitment Process Step-by-step
+2024-11-10 18:13:57 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-10 18:13:58 - INFO - 
+
+CSV created successfully!

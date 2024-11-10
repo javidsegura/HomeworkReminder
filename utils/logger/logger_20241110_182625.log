@@ -1,0 +1,31 @@
+2024-11-10 18:26:25 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 18:26:28 - INFO - Cookies saved successfully
+2024-11-10 18:26:42 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 18:26:42 - INFO - 
+2024-11-10 18:26:42 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 18:26:47 - INFO - 	=> Finished scraping assignment: Selenium Contest
+
+2024-11-10 18:26:47 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 18:26:47 - INFO - 
+2024-11-10 18:26:47 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 18:26:51 - INFO - 	=> Finished scraping assignment: Aggregation Framework Second Exercises
+
+2024-11-10 18:26:51 - INFO - 
+2024-11-10 18:26:51 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 18:26:56 - INFO - 	=> Finished scraping assignment: Spark Assignment
+
+2024-11-10 18:26:56 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 18:26:56 - INFO - 
+2024-11-10 18:26:56 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 18:27:01 - INFO - 	=> Finished scraping assignment: Low Code Databases: Airtable
+
+2024-11-10 18:27:01 - INFO - 
+=> SCRAPING DATE: Due date: 11/15/24, 11:59 PM
+2024-11-10 18:27:01 - INFO - 
+2024-11-10 18:27:01 - INFO - 	=> Scraping: Introduction to Azure Logic Apps
+2024-11-10 18:27:03 - WARNING - 	!> Assignment 'Introduction to Azure Logic Apps' could not be opened
+2024-11-10 18:27:03 - INFO - 	=> Finished scraping assignment: Introduction to Azure Logic Apps
+

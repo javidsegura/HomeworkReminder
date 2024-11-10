@@ -1,1 +1,1 @@
-{"summary":"Create an Airtable account and import a provided CSV file containing inventory data. Organize the database, create user-friendly forms and interfaces, and set up automation for stock alerts.","estimated_time":"3-5 hours","difficulty":3}
+{"summary":"Sign up for an Airtable account, download the provided CSV file, and import the data into Airtable. Organize the database logically, create a filter view, and design a user-friendly form for updating inventory.","estimated_time":"3-5 hours","difficulty":3}

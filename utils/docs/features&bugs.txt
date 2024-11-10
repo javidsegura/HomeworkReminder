@@ -2,9 +2,6 @@
 
 
 FEATURES:
-- Iterate over all the dates in the deadline-list container
-- Write locally
-- Create a CSV file with all the assignmetns 
 - Store the icon too in order to classify the assignment (1)
 - Analytics on the homework
 - Access without login
@@ -25,6 +22,7 @@ FEATURES:
 19) Send from your own bot
 20) More protection against possibe dynamic changes in the website
 21) Click a button in an email to refresh again
+22) Add readme.md
 
 
 BUGS:
