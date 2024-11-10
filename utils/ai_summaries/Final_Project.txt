@@ -1,0 +1,7 @@
+```json
+{
+  "summary": "Develop a database system that processes restaurant menu PDFs using AI and stores the structured data, demonstrating your understanding of database design, ETL processes, and system integration.",
+  "estimated_time": "10-15 hours",
+  "estimated_difficulty": 4
+}
+```

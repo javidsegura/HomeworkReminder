@@ -1,1 +1,89 @@
-course_name,assignment_name,due_time,assignment_type,is_clickable,is_graded,max_points
+course_name,assignment_name,due_time,assignment_type,is_clickable,is_graded,max_points,ai_summary,screenshot_name
+DESIGNING AND USING DATABASES,Selenium Contest,"11/10/24, 11:59 PM",assignments,True,True,100.0,"```json
+{
+  ""summary"": ""Participate in the Selenium Contest related to database design and usage, showcasing skills in Selenium."",
+  ""estimated_time"": ""5-10 hours"",
+  ""estimated_difficulty"": 3
+}
+```",utils/screenshots/Selenium_Contest.png
+DESIGNING AND USING DATABASES,Aggregation Framework Second Exercises,"11/13/24, 11:59 PM",assignments,True,True,100.0,"{
+  ""summary"": ""Calculate the average age of students and group them by city to calculate the average grades across all subjects."",
+  ""estimated_time"": ""2-3 hours"",
+  ""estimated_difficulty"": 3
+}",utils/screenshots/Aggregation_Framework_Second_Exercises.png
+DESIGNING AND USING DATABASES,Spark Assignment,"11/13/24, 11:59 PM",assignments,True,True,100.0,"{
+  ""summary"": ""Complete the Spark Installation as outlined in the provided PDF document. This involves downloading, setting up, and possibly troubleshooting the installation of Spark for database management tasks."",
+  ""estimated_time"": ""3-5 hours"",
+  ""estimated_difficulty"": 3
+}",utils/screenshots/Spark_Assignment.png
+TECHNOLOGY,Low Code Databases: Airtable,"11/14/24, 5:00 PM",document-blank,True,True,100.0,"```python
+{
+    ""summary"": ""Create an Airtable account, import a provided CSV file, organize the database fields, and design a user-friendly form for employees to update the inventory."",
+    ""estimated_time"": ""2-4 hours"",
+    ""estimated_difficulty"": 3
+}
+```",utils/screenshots/Low_Code_Databases:_Airtable.png
+CLOUD COMPUTING,Introduction to Azure Logic Apps,"11/15/24, 11:59 PM",homework,True,True,10.0,"```python
+{
+    ""summary"": ""Complete an online module about Azure Logic Apps and upload a screenshot showing your username. Additionally, create a LogicApp workflow to connect Azure Queues with Azure Blobs to process new queue messages."",
+    ""estimated_time"": ""3-5 hours"",
+    ""estimated_difficulty"": 3
+}
+```",utils/screenshots/Introduction_to_Azure_Logic_Apps.png
+CLOUD COMPUTING,Getting Starting with Serverless Badge,"11/18/24, 11:59 PM",homework,True,False,,,
+CALCULUS FOR COMPUTER SCIENCE,Quiz 3,"11/21/24, 9:00 AM",test,False,False,,,
+CLOUD COMPUTING,Milestone 2: Status Update - Backend Progress and Azure Storage,"11/24/24, 11:59 PM",document-blank,True,True,35.0,"```python
+{
+    ""summary"": ""Provide a progress update in .pptx format on backend development, demonstrating Azure Functions with MySQL database for managing expense data, explaining Azure Blobs for receipt storage, and optionally implementing Azure Queue for capturing incorrect requests."",
+    ""estimated_time"": ""4-6 hours"",
+    ""estimated_difficulty"": 3
+}
+```",utils/screenshots/Milestone_2:_Status_Update_-_Backend_Progress_and_Azure_Storage.png
+ALGORITHMS & DATA STRUCTURES,Boardgame Groupwork,"11/28/24, 11:59 PM",document-blank,True,True,100.0,,
+DESIGNING AND USING DATABASES,Final Project,"12/5/24, 11:59 PM",assignments,True,True,100.0,"```json
+{
+  ""summary"": ""Develop a database system that processes restaurant menu PDFs using AI and stores the structured data, demonstrating your understanding of database design, ETL processes, and system integration."",
+  ""estimated_time"": ""10-15 hours"",
+  ""estimated_difficulty"": 4
+}
+```",utils/screenshots/Final_Project.png
+CLOUD COMPUTING,Milestone 3: Final Presentation and Demo,"12/8/24, 11:59 PM",document-blank,True,True,45.0,"```json
+{
+  ""summary"": ""Prepare a presentation demonstrating the backend and frontend functionalities of your system, showcasing how Azure components work together to manage expense data. Optionally, include a demonstration of the Dead Letter Queue functionalities."",
+  ""estimated_time"": ""5-10 hours"",
+  ""estimated_difficulty"": 4
+}
+```",utils/screenshots/Milestone_3:_Final_Presentation_and_Demo.png
+CLOUD COMPUTING,Group Project Checklist,"12/8/24, 11:59 PM",test,True,True,0.0,"```json
+{
+  ""summary"": ""Confirm the configuration for your group project, including database access and Azure resource management."",
+  ""estimated_time"": ""1-2 hours"",
+  ""estimated_difficulty"": 3
+}
+```",utils/screenshots/Group_Project_Checklist.png
+COMPUTER PROGRAMMING 1,Extra Points,"12/10/24, 4:22 PM",discussion,False,False,,,
+CLOUD COMPUTING,Sky Computing,"12/13/24, 12:59 PM",discussion,True,False,,,
+CLOUD COMPUTING,The role of containers in Cloud environments,"12/13/24, 11:59 PM",discussion,True,False,,,
+CLOUD COMPUTING,The Environmental Impact of Data Centers and the Quest for New Energy Solutions,"12/13/24, 11:59 PM",discussion,True,False,,,
+CALCULUS FOR COMPUTER SCIENCE,Final Exam,"12/17/24, 10:00 AM",test,False,False,,,
+CAREER DEVELOPMENT 2 - SINGLE,STEP 1: Introduction to T&C,"3/20/25, 11:59 PM",test,True,True,10.0,"```json
+{
+  ""summary"": ""Watch a webinar, answer one multiple-choice question, and complete a practical activity."",
+  ""estimated_time"": ""1-2 hours"",
+  ""estimated_difficulty"": 2
+}
+```",utils/screenshots/STEP_1:_Introduction_to_T&C.png
+CAREER DEVELOPMENT 2 - SINGLE,STEP 3: Internship Search,"3/20/25, 11:59 PM",test,True,True,40.0,"```python
+{
+    ""summary"": ""Watch a webinar and answer 4 multiple-choice questions. Then complete a practical activity related to internship searching."",
+    ""estimated_time"": ""2-3 hours"",
+    ""estimated_difficulty"": 3
+}
+```",utils/screenshots/STEP_3:_Internship_Search.png
+CAREER DEVELOPMENT 2 - SINGLE,STEP 4: Recruitment Process Step-by-step,"3/20/25, 11:59 PM",test,True,True,20.0,"```json
+{
+  ""summary"": ""Watch a webinar and answer 2 multiple-choice questions related to the recruitment process before completing the practical activity."",
+  ""estimated_time"": ""1-2 hours"",
+  ""estimated_difficulty"": 3
+}
+```",utils/screenshots/STEP_4:_Recruitment_Process_Step-by-step.png

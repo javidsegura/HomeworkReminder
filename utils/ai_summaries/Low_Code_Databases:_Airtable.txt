@@ -1,0 +1,7 @@
+```python
+{
+    "summary": "Create an Airtable account, import a provided CSV file, organize the database fields, and design a user-friendly form for employees to update the inventory.",
+    "estimated_time": "2-4 hours",
+    "estimated_difficulty": 3
+}
+```

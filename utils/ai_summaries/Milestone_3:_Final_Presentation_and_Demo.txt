@@ -1,0 +1,7 @@
+```json
+{
+  "summary": "Prepare a presentation demonstrating the backend and frontend functionalities of your system, showcasing how Azure components work together to manage expense data. Optionally, include a demonstration of the Dead Letter Queue functionalities.",
+  "estimated_time": "5-10 hours",
+  "estimated_difficulty": 4
+}
+```

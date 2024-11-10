@@ -1,0 +1,7 @@
+```python
+{
+    "summary": "Watch a webinar and answer 4 multiple-choice questions. Then complete a practical activity related to internship searching.",
+    "estimated_time": "2-3 hours",
+    "estimated_difficulty": 3
+}
+```

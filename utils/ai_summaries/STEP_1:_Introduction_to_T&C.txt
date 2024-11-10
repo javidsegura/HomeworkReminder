@@ -1,0 +1,7 @@
+```json
+{
+  "summary": "Watch a webinar, answer one multiple-choice question, and complete a practical activity.",
+  "estimated_time": "1-2 hours",
+  "estimated_difficulty": 2
+}
+```

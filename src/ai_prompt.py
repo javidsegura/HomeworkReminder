@@ -2,15 +2,8 @@ from openai import OpenAI
 import os
 from base64 import b64encode
 
-def summarize_content(text: str, image_path: str, output_file: str) -> None:
-    """
-    Send text and image to OpenAI for summarization and write the result to a file.
-    
-    Args:
-        text (str): The text to summarize
-        image_path (str): Path to the image file
-        output_file (str): Path where to save the summary
-    """
+def summarize_content(assignment: dict, image_path: str, output_file: str) -> str:
+    """ Send image and text for LLM summarization """
     # Initialize OpenAI client
     client = OpenAI(api_key=os.getenv("OPEN_API_KEY"))
     
@@ -21,11 +14,22 @@ def summarize_content(text: str, image_path: str, output_file: str) -> None:
     # Prepare the message for GPT-4 Vision
     messages = [
         {
+            "role": "system",
+            "content": "You are a helpful assistant that summarizes homework assignments. You \
+            will be given an image of an assignment and some information about it. VERY IMPORTANT TO \
+            PROVIDE NEW INFORMATION, NOT JUST REPEAT WHAT IS GIVEN TO YOU."
+        },
+        {
             "role": "user",
             "content": [
                 {
                     "type": "text",
-                    "text": f"Please provide a concise summary of this content. Here's the text:\n\n{text}"
+                    "text": f"""This is the info on my assignment: Assignment name: {assignment['assignment_name']}\nDue date: {assignment['due_time']}, 
+                    course name: {assignment['course_name']}, assignment type: {assignment['assignment_type']}, max points: {assignment['max_points']} 
+                    . Return a JSON in a single line with the following information: 
+                    - summary of the assignment (2-3 sentences)
+                    - estimated time it will take to complete the assignment
+                    - estimated difficulty of the assignment (1-5)"""
                 },
                 {
                     "type": "image_url",
@@ -50,6 +54,4 @@ def summarize_content(text: str, image_path: str, output_file: str) -> None:
     # Write the summary to the output file
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(summary)
-
-if __name__ == "__main__":
-    summarize_content("some text", "screenshots/Boardgame_Groupwork.png", "test.txt")
+    return summary

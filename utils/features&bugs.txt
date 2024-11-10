@@ -18,7 +18,9 @@ FEATURES:
 12) Graded or not
 13) Dont use sleep, just wait until its loaded 
 14) Summaries should be done at the end and not at each iteration 
-
+15) Add a better logger
+16) CSV goes to pandas dataframe
+17) Add AI summary to non-clickable assignments
 
 
 BUGS:
@@ -29,3 +31,8 @@ IDEA:
 - One single mode: scan the assignment => take screenshot => make API call to summarize => send email with all info
 
 - Take screenshot only if clickable 
+
+
+PROCDEURE:
+4. Better debugging
+5. set up logger

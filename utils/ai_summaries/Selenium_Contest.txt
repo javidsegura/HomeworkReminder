@@ -1,0 +1,7 @@
+```json
+{
+  "summary": "Participate in the Selenium Contest related to database design and usage, showcasing skills in Selenium.",
+  "estimated_time": "5-10 hours",
+  "estimated_difficulty": 3
+}
+```

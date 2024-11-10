@@ -1,0 +1,7 @@
+```json
+{
+  "summary": "Watch a webinar and answer 2 multiple-choice questions related to the recruitment process before completing the practical activity.",
+  "estimated_time": "1-2 hours",
+  "estimated_difficulty": 3
+}
+```

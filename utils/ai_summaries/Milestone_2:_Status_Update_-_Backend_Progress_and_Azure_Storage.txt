@@ -1,0 +1,7 @@
+```python
+{
+    "summary": "Provide a progress update in .pptx format on backend development, demonstrating Azure Functions with MySQL database for managing expense data, explaining Azure Blobs for receipt storage, and optionally implementing Azure Queue for capturing incorrect requests.",
+    "estimated_time": "4-6 hours",
+    "estimated_difficulty": 3
+}
+```

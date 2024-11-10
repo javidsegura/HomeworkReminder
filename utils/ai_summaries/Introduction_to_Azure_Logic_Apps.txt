@@ -1,0 +1,7 @@
+```python
+{
+    "summary": "Complete an online module about Azure Logic Apps and upload a screenshot showing your username. Additionally, create a LogicApp workflow to connect Azure Queues with Azure Blobs to process new queue messages.",
+    "estimated_time": "3-5 hours",
+    "estimated_difficulty": 3
+}
+```

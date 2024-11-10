@@ -1,7 +1,0 @@
-**Milestone 3: Final Presentation and Demo Summary**
-
-In this milestone, students are required to present their system, showcasing both backend and frontend functionalities in a live demo, with the frontend accessible to the professor. Additionally, students should demonstrate how Azure components manage expense data and, optionally, how the Dead Letter Queue handles invalid requests. 
-
-The presentation must be in .pptx format, limited to 10 slides, and include any relevant scripts or notebooks uploaded to Blackboard. If using GitHub, repositories must remain private. 
-
-Grading will focus on frontend design (15%), backend demo clarity (20%), and presentation skills (10%). The assessment is due on December 8, 2024.
