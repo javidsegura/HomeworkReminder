@@ -1,15 +1,18 @@
 from csvFuncs import CSVFuncs
+from ai_prompt import summarize_content
+from notifiers.emailNotfiy import EmailNotify
 
 import os
 from getpass import getpass
 import time
+import logging
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from ai_prompt import summarize_content
+
 
 class BlackboardScraper:
     def __init__(self):
@@ -18,28 +21,48 @@ class BlackboardScraper:
         self.csv_funcs = CSVFuncs()
         os.makedirs("utils/ai_summaries", exist_ok=True)
         os.makedirs("utils/screenshots", exist_ok=True)
+        os.makedirs("utils/logger", exist_ok=True)
+
+    def set_up_logger(self):
+        """Set up logging configuration"""
+        # Create directory if it doesn't exist
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        log_filename = f'utils/logger/logger_{timestamp}.log'
+        
+        logging.basicConfig(
+            filename=log_filename,
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
 
     def login(self, username, password):
         """ pass throught the login page (MFA)"""
         
-        self.driver.get("https://blackboard.ie.edu/ultra/calendar")
+        try:
+            self.driver.get("https://blackboard.ie.edu/ultra/calendar")
         
-        username_field = self.wait.until(
-            EC.presence_of_element_located((By.ID, "i0116"))
-        )
-        username_field.send_keys(username)
-        username_field.send_keys(Keys.RETURN)
-        
-        password_field = self.wait.until(
-            EC.element_to_be_clickable((By.ID, "i0118"))
-        )
-        password_field.send_keys(password)
-        
-        # Find and click the submit button
-        submit_button = self.wait.until(
-            EC.element_to_be_clickable((By.ID, "idSIButton9"))
-        )
-        submit_button.click()
+            username_field = self.wait.until(
+                EC.presence_of_element_located((By.ID, "i0116"))
+            )
+            username_field.send_keys(username)
+            username_field.send_keys(Keys.RETURN)
+            
+            password_field = self.wait.until(
+                EC.element_to_be_clickable((By.ID, "i0118"))
+            )
+            password_field.send_keys(password)
+            
+            # Find and click the submit button
+            submit_button = self.wait.until(
+                EC.element_to_be_clickable((By.ID, "idSIButton9"))
+            )
+            submit_button.click()
+        except Exception as e:
+            msg = f"Error logging in: {e}"
+            print(msg)
+            logging.error(msg)
+            exit(-1)
 
         # Wait for MFA completion by checking for Blackboard calendar elements
         found = False
@@ -50,12 +73,14 @@ class BlackboardScraper:
                 )
                 found = True  # Exit loop when element is found
             except Exception as e:
-                print("Still waiting for MFA to be completed...")
+                msg = "Still waiting for MFA to be completed..."
+                print(msg)
+                logging.info(msg)
                 time.sleep(5)  # Retry every 5 seconds
         
       
     def scrapData(self):
-        """ scap hw assignments"""    
+        """ scap hw assignments . missing to check if element already in df in order to avoid redundancy"""    
 
         try:
             due_dates_tab = self.wait.until(
@@ -63,7 +88,9 @@ class BlackboardScraper:
             )
             due_dates_tab.click()
         except Exception:
-            print("!> Error clicking on the 'Due Dates' tab")
+            msg = "!> Error clicking on the 'Due Dates' tab"
+            print(msg)
+            logging.error(msg)
             exit(-1)
        
         deadline_list = self.wait.until(
@@ -83,9 +110,10 @@ class BlackboardScraper:
         assignments = []
         # each container is a different date
         for container in deadline_containers: 
-            #Today - November 10, 2024Selenium ContestDue date: 11/10/24, 11:59 PM ∙ BCSAI2024CSAI.2.M.A_C2_464907: DESIGNING AND USING DATABASES gotta take only the date
             date = container.find_element(By.CSS_SELECTOR, "span:first-child").text.replace('\n', '')
-            print(f"\n=> SCRAPING DATE: {date}")
+            msg = f"\n=> SCRAPING DATE: {date}"
+            print(msg)
+            logging.info(msg)
 
             due_items = container.find_elements(
                 By.CSS_SELECTOR, 
@@ -94,6 +122,8 @@ class BlackboardScraper:
             # each due item is an assignment, test, etc
             for due_item in due_items: 
                 print("\n")
+                logging.info("")
+
                 # 0) CATEGORIZE ASSIGNMENT TYPE
                 element_image = due_item.find_element(By.CLASS_NAME, "element-image")
                 icon_container = element_image.find_element(By.TAG_NAME, "bb-ui-content-icon")
@@ -108,7 +138,9 @@ class BlackboardScraper:
                     assignment_type = tag_name.replace('bb-ui-icon-large-', '') # remove prefix
                 except Exception:
                     assignment_type = "unknown"
-                    print("!> Could not determine assignment type. Set to 'unknown'.")
+                    msg = "!> Could not determine assignment type. Set to 'unknown'."
+                    print(msg)
+                    logging.warning(msg)
         
                 # 1) GET ASSIGNMENT NAME
                 element_details = due_item.find_element(By.CLASS_NAME, "element-details")
@@ -118,7 +150,9 @@ class BlackboardScraper:
                     ".name a"
                 ).text
 
-                print(f"\t=> Scraping: {assignment_name}")
+                msg = f"\t=> Scraping: {assignment_name}"
+                print(msg)
+                logging.info(msg)
 
                 # 2) GET DUE DATE
                 content_div = element_details.find_element(By.CLASS_NAME, "content")
@@ -132,6 +166,16 @@ class BlackboardScraper:
                     By.CSS_SELECTOR, 
                     "a"
                 ).text
+
+                # If the assignment was already scraping, skip it 
+                checking = self.csv_funcs.check_add(course_name, assignment_name) # returns true if u can write
+                if not checking:
+                    msg = f"\t!> Assignment '{assignment_name}' already exists in the CSV. Skipping..."
+                    print(msg)
+                    logging.warning(msg)
+                    continue
+
+                # Remove the first word from the course name    
                 for char in range(len(course_name)):
                     if course_name[char] == " ":
                         course_name = course_name[char+1:]
@@ -140,14 +184,18 @@ class BlackboardScraper:
                 is_graded = False
                 max_points = "N/A"
                 screenshot_name = "N/A"
+                link = "N/A"
 
                 try:
                     link = element_details.find_element(By.CSS_SELECTOR, ".name a")
                     is_clickable = link.is_enabled() and link.is_displayed()
                     
                     if is_clickable:
-                        link.click() 
+                        # Get the actual URL from the data-href attribute or other possible attributes
+                        link_url = "N/A" # is this needed?
+                        link.click()
                         time.sleep(2) # wait for sidebar to load
+                        link_url = self.driver.current_url
                         
                         # 4) GET GRADING INFO
                         try:
@@ -160,7 +208,9 @@ class BlackboardScraper:
                                 )
                                 max_points = float(points_element.text)
                         except Exception:
-                            print(f"\t!> No grading information found for '{assignment_name}'")
+                            msg = f"\t!> No grading information found for '{assignment_name}'"
+                            print(msg)
+                            logging.warning(msg)
                         
                         # Check for footer and take screenshot
                         try:
@@ -172,8 +222,12 @@ class BlackboardScraper:
                             # Take screenshot
                             screenshot_name = f"utils/screenshots/{assignment_name.replace(' ', '_')}.png"
                             self.driver.save_screenshot(screenshot_name)
+                            if link_url == "javascript:void(0)": 
+                                link_url = self.driver.current_url
                         except Exception:
-                            print(f"\t!> No footer found for '{assignment_name}. Can't access the assignment page.")
+                            msg = f"\t!> No footer found for '{assignment_name}. Can't access the assignment page."
+                            print(msg)
+                            logging.warning(msg)
 
                         # Close the panel (same inside and outside the assignment page)
                         close_button = self.wait.until(
@@ -190,7 +244,8 @@ class BlackboardScraper:
                             "is_graded": is_graded,
                             "max_points": max_points,
                             "ai_summary": "N/A",
-                            "screenshot_name": screenshot_name
+                            "screenshot_name": screenshot_name,
+                            "link": link_url
                         })
                     else:
                         assignments.append({
@@ -202,10 +257,13 @@ class BlackboardScraper:
                             "is_graded": is_graded,
                             "max_points": max_points,
                             "ai_summary": "N/A",
-                            "screenshot_name": screenshot_name
+                            "screenshot_name": screenshot_name,
+                            "link": "N/A"
                         })
                 except Exception:
-                    print(f"\t!> Assignment '{assignment_name}' could not be opened")
+                    msg = f"\t!> Assignment '{assignment_name}' could not be opened"
+                    print(msg)
+                    logging.warning(msg)
                     assignments.append({
                         "course_name": course_name,
                         "assignment_name": assignment_name,
@@ -215,14 +273,20 @@ class BlackboardScraper:
                         "is_graded": is_graded,
                         "max_points": max_points,
                         "ai_summary": "N/A",
-                        "screenshot_name": screenshot_name
+                        "screenshot_name": screenshot_name,
+                        "link": "N/A"
                     })
-                print(f"\t=> Finished scraping assignment: {assignment_name}", end="\n\t--------------------------------")
-            print("\n****************************************************\n")
+                msg = f"\t=> Finished scraping assignment: {assignment_name}\n"
+                print(msg, "\t--------------------------------")
+                logging.info(msg)
+            msg = "\n****************************************************\n"
+            print(msg)
 
         if len(assignments) == 0:
-            print("No assignments found. Exiting...")
-            exit(-1)
+            msg = "No (new) assignments found. Exiting..."
+            print(msg)
+            logging.error(msg)
+            exit(0)
 
         return assignments
 
@@ -233,20 +297,37 @@ def main():
     
     username = os.getenv('BLACKBOARD_USERNAME')
     password = os.getenv('BLACKBOARD_PASSWORD')
+
+    if not username:
+        username = input("Enter your Blackboard username: ")
+    if not password:
+        password = getpass("Enter your Blackboard password: ")
     
     scraper = BlackboardScraper()
+    scraper.set_up_logger()
+
+    notifier = EmailNotify(credentials_file="utils/OAuth/credentials.json")
+
     try:
         scraper.login(username, password)
         scraper.csv_funcs.start_csv()
         data = scraper.scrapData()
         for assignment in data:
-            if assignment["screenshot_name"]: # I only want to summarize assignments that have a screenshot
-                summary = summarize_content(assignment, assignment["screenshot_name"], f"utils/ai_summaries/{assignment['assignment_name'].replace(' ', '_')}.txt")
+            if assignment["screenshot_name"] != "N/A": # I only want to summarize assignments that have a screenshot (for now)
+                print(f"Summarizing {assignment['assignment_name']}")
+                logging.info(f"Summarizing {assignment['assignment_name']}")
+                summary = summarize_content(assignment, assignment["screenshot_name"], f"utils/ai_summaries/{assignment['assignment_name'].replace(' ', '_')}.json")
                 assignment["ai_summary"] = summary
             scraper.csv_funcs.append_to_csv(assignment)
-        print("\n\nCSV created successfully!")
+            notifier.send_email(assignment, assignment["screenshot_name"])
+        msg = "\n\nCSV created successfully!"
+        print(msg)
+        logging.info(msg)
     finally:
         scraper.close()
+        scraper.csv_funcs.write_to_csv()
+
+
 
 if __name__ == "__main__":
     main()

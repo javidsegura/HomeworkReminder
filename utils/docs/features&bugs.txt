@@ -21,6 +21,10 @@ FEATURES:
 15) Add a better logger
 16) CSV goes to pandas dataframe
 17) Add AI summary to non-clickable assignments
+18) Improve fatal case recovery
+19) Send from your own bot
+20) More protection against possibe dynamic changes in the website
+21) Click a button in an email to refresh again
 
 
 BUGS:

@@ -1,0 +1,132 @@
+2024-11-10 16:12:21 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Selenium Contest' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Aggregation Framework Second Exercises' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Spark Assignment' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Low Code Databases: Airtable' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/15/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Introduction to Azure Logic Apps
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Introduction to Azure Logic Apps' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/18/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Getting Starting with Serverless Badge
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Getting Starting with Serverless Badge' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/21/24, 9:00 AM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Quiz 3
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Quiz 3' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/24/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Milestone 2: Status Update - Backend Progress and Azure Storage
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Milestone 2: Status Update - Backend Progress and Azure Storage' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 11/28/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Boardgame Groupwork
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Boardgame Groupwork' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 12/5/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Final Project
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Final Project' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 12/8/24, 11:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Milestone 3: Final Presentation and Demo
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Milestone 3: Final Presentation and Demo' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Group Project Checklist
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Group Project Checklist' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 12/10/24, 4:22 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Extra Points
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Extra Points' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+****************************************************
+
+2024-11-10 16:12:41 - INFO - 
+=> SCRAPING DATE: Due date: 12/13/24, 12:59 PM
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: Sky Computing
+2024-11-10 16:12:41 - WARNING - 	!> Assignment 'Sky Computing' already exists in the CSV. Skipping...
+2024-11-10 16:12:41 - INFO - 
+2024-11-10 16:12:41 - INFO - 	=> Scraping: The role of containers in Cloud environments
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'The role of containers in Cloud environments' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+2024-11-10 16:12:42 - INFO - 	=> Scraping: The Environmental Impact of Data Centers and the Quest for New Energy Solutions
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'The Environmental Impact of Data Centers and the Quest for New Energy Solutions' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+****************************************************
+
+2024-11-10 16:12:42 - INFO - 
+=> SCRAPING DATE: Due date: 12/17/24, 10:00 AM
+2024-11-10 16:12:42 - INFO - 
+2024-11-10 16:12:42 - INFO - 	=> Scraping: Final Exam
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'Final Exam' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+****************************************************
+
+2024-11-10 16:12:42 - INFO - 
+=> SCRAPING DATE: Due date: 3/20/25, 11:59 PM
+2024-11-10 16:12:42 - INFO - 
+2024-11-10 16:12:42 - INFO - 	=> Scraping: STEP 1: Introduction to T&C
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'STEP 1: Introduction to T&C' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+2024-11-10 16:12:42 - INFO - 	=> Scraping: STEP 3: Internship Search
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'STEP 3: Internship Search' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+2024-11-10 16:12:42 - INFO - 	=> Scraping: STEP 4: Recruitment Process Step-by-step
+2024-11-10 16:12:42 - WARNING - 	!> Assignment 'STEP 4: Recruitment Process Step-by-step' already exists in the CSV. Skipping...
+2024-11-10 16:12:42 - INFO - 
+****************************************************
+
+2024-11-10 16:12:42 - ERROR - No assignments found. Exiting...

@@ -1,0 +1,69 @@
+course_name,assignment_name,due_time,assignment_type,is_clickable,is_graded,max_points,ai_summary,screenshot_name,link
+DESIGNING AND USING DATABASES,Selenium Contest,"11/10/24, 11:59 PM",assignments,True,True,100.0,"{
+    ""summary"": ""Complete the assessment by submitting the required files or text before the due date. The contest allows for unlimited submission attempts and is graded out of a maximum of 100 points."",
+    ""estimated_time"": ""N/A"",
+    ""difficulty"": 3
+}",utils/screenshots/Selenium_Contest.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1667442_1/overview?courseId=_97849_1
+DESIGNING AND USING DATABASES,Aggregation Framework Second Exercises,"11/13/24, 11:59 PM",assignments,True,True,100.0,"{
+    ""summary"": ""Calculate the average age of students using an aggregation pipeline. Group students by city to calculate average grades, filter students based on grade thresholds, and project specific fields in the final output."",
+    ""estimated_time"": ""4 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/Aggregation_Framework_Second_Exercises.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1674005_1/overview?courseId=_97849_1
+DESIGNING AND USING DATABASES,Spark Assignment,"11/13/24, 11:59 PM",assignments,True,True,100.0,"{
+    ""summary"": ""Complete the tasks outlined in the Spark Installation.pdf document. Submit the assignment by the due date with a maximum of 100 points available."",
+    ""estimated_time"": ""N/A"",
+    ""difficulty"": 3
+}",utils/screenshots/Spark_Assignment.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1674088_1/overview?courseId=_97849_1
+TECHNOLOGY,Low Code Databases: Airtable,"11/14/24, 5:00 PM",document-blank,True,True,100.0,"{
+    ""summary"": ""Create an Airtable account and import a provided CSV file containing inventory data. Organize the database, create user-friendly forms and interfaces, and set up automation for stock alerts."",
+    ""estimated_time"": ""3-5 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/Low_Code_Databases:_Airtable.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1565036_1/overview?courseId=_98906_1
+CLOUD COMPUTING,Introduction to Azure Logic Apps,"11/15/24, 11:59 PM",homework,True,True,10.0,"{
+    ""summary"": ""Complete the online module at the provided link and upload a screenshot showing your username. Create a Logic App using the Logic App Designer to connect Azure Queues with Azure Blobs."",
+    ""estimated_time"": ""2 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/Introduction_to_Azure_Logic_Apps.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1522329_1/overview?courseId=_97667_1
+CLOUD COMPUTING,Getting Starting with Serverless Badge,"11/18/24, 11:59 PM",homework,True,False,N/A,N/A,N/A,https://blackboard.ie.edu/ultra/calendar/assessment/_1522322_1/overview?courseId=_97667_1
+CALCULUS FOR COMPUTER SCIENCE,Quiz 3,"11/21/24, 9:00 AM",test,False,False,N/A,N/A,N/A,N/A
+CLOUD COMPUTING,Milestone 2: Status Update - Backend Progress and Azure Storage,"11/24/24, 11:59 PM",document-blank,True,True,35.0,"{
+    ""summary"": ""Submit a progress update in .pptx format detailing the implementation of Azure Functions for database interaction and an explanation of Azure Blobs for receipt storage. Additionally, optionally implement an Azure Queue as a Dead Letter Queue for incorrect requests and attach all related scripts and notebooks to your submission."",
+    ""estimated_time"": ""4-6 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/Milestone_2:_Status_Update_-_Backend_Progress_and_Azure_Storage.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1607444_1/overview?courseId=_97667_1
+ALGORITHMS & DATA STRUCTURES,Boardgame Groupwork,"11/28/24, 11:59 PM",document-blank,True,True,100.0,N/A,N/A,https://blackboard.ie.edu/ultra/calendar/assessment/_1591601_1/external-overview?courseId=_97665_1
+DESIGNING AND USING DATABASES,Final Project,"12/5/24, 11:59 PM",assignments,True,True,100.0,"{
+    ""summary"": ""Create a database system that processes restaurant menu PDFs using AI and stores the structured data. The project requires designing a normalized database schema, creating an ETL pipeline, and integrating with AI APIs."",
+    ""estimated_time"": ""15-20 hours"",
+    ""difficulty"": 4
+}",utils/screenshots/Final_Project.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1664010_1/overview?courseId=_97849_1
+CLOUD COMPUTING,Milestone 3: Final Presentation and Demo,"12/8/24, 11:59 PM",document-blank,True,True,45.0,"{
+    ""summary"": ""Present your system to the class, including a live demonstration of both backend and frontend functionalities in a PowerPoint presentation limited to 10 slides. Additionally, attach any scripts or notebooks used for backend/frontend development, with specific instructions for GitHub repository access if applicable."",
+    ""estimated_time"": ""N/A"",
+    ""difficulty"": 3
+}",utils/screenshots/Milestone_3:_Final_Presentation_and_Demo.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1607447_1/overview?courseId=_97667_1
+CLOUD COMPUTING,Group Project Checklist,"12/8/24, 11:59 PM",test,True,True,0.0,"{
+    ""summary"": ""Confirm your group's access to specific resources like the Azure Resource Group and Lab VM. Ensure the successful completion of tasks related to Azure Storage and Azure Functions as listed in the checklist."",
+    ""estimated_time"": ""2 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/Group_Project_Checklist.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1621926_1/overview?courseId=_97667_1
+COMPUTER PROGRAMMING 1,Extra Points,"12/10/24, 4:22 PM",discussion,False,False,N/A,N/A,N/A,N/A
+CLOUD COMPUTING,Sky Computing,"12/13/24, 12:59 PM",discussion,True,False,N/A,N/A,N/A,https://blackboard.ie.edu/ultra/calendar/discussion/_1531177_1?view=discussions&courseId=_97667_1
+CLOUD COMPUTING,The role of containers in Cloud environments,"12/13/24, 11:59 PM",discussion,True,False,N/A,N/A,N/A,https://blackboard.ie.edu/ultra/calendar/discussion/_1531174_1?view=discussions&courseId=_97667_1
+CLOUD COMPUTING,The Environmental Impact of Data Centers and the Quest for New Energy Solutions,"12/13/24, 11:59 PM",discussion,True,False,N/A,N/A,N/A,https://blackboard.ie.edu/ultra/calendar/discussion/_1531173_1?view=discussions&courseId=_97667_1
+CALCULUS FOR COMPUTER SCIENCE,Final Exam,"12/17/24, 10:00 AM",test,False,False,N/A,N/A,N/A,N/A
+CAREER DEVELOPMENT 2 - SINGLE,STEP 1: Introduction to T&C,"3/20/25, 11:59 PM",test,True,True,10.0,"{
+    ""summary"": ""Complete a webinar and answer one multiple-choice question along with a practical activity. Submissions must be made by the due date for grading, with a maximum of 10 points available."",
+    ""estimated_time"": ""1-2 hours"",
+    ""difficulty"": 2
+}",utils/screenshots/STEP_1:_Introduction_to_T&C.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1404762_1/overview?courseId=_99087_1
+CAREER DEVELOPMENT 2 - SINGLE,STEP 3: Internship Search,"3/20/25, 11:59 PM",test,True,True,40.0,"{
+    ""summary"": ""Watch a webinar to learn about an internship search and answer 4 multiple-choice questions based on the content. Additionally, prepare for a practical activity outlined in the subsequent step of the assignment."",
+    ""estimated_time"": ""2 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/STEP_3:_Internship_Search.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1404766_1/overview?courseId=_99087_1
+CAREER DEVELOPMENT 2 - SINGLE,STEP 4: Recruitment Process Step-by-step,"3/20/25, 11:59 PM",test,True,True,20.0,"{
+    ""summary"": ""Watch a designated webinar and answer two multiple-choice questions based on the content. Prepare to complete a practical activity related to the recruitment process for submission."",
+    ""estimated_time"": ""2 hours"",
+    ""difficulty"": 3
+}",utils/screenshots/STEP_4:_Recruitment_Process_Step-by-step.png,https://blackboard.ie.edu/ultra/calendar/assessment/_1404768_1/overview?courseId=_99087_1

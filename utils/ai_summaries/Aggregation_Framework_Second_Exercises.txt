@@ -1,5 +1,0 @@
-{
-  "summary": "Calculate the average age of students and group them by city to calculate the average grades across all subjects.",
-  "estimated_time": "2-3 hours",
-  "estimated_difficulty": 3
-}

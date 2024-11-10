@@ -1,6 +1,7 @@
 from openai import OpenAI
 import os
 from base64 import b64encode
+import json
 
 def summarize_content(assignment: dict, image_path: str, output_file: str) -> str:
     """ Send image and text for LLM summarization """
@@ -15,21 +16,29 @@ def summarize_content(assignment: dict, image_path: str, output_file: str) -> st
     messages = [
         {
             "role": "system",
-            "content": "You are a helpful assistant that summarizes homework assignments. You \
-            will be given an image of an assignment and some information about it. VERY IMPORTANT TO \
-            PROVIDE NEW INFORMATION, NOT JUST REPEAT WHAT IS GIVEN TO YOU."
+            "content": "You are a helpful assistant that EXPLAINS WHAT THE ASSIGNMENT IS ABOUT. \
+            Focus on concrete details and requirements rather than generic descriptions. \
+            You must respond with valid JSON only. Avoid mentioning the assignment name, course name, or other metadata that's already provided."
         },
         {
             "role": "user",
             "content": [
                 {
                     "type": "text",
-                    "text": f"""This is the info on my assignment: Assignment name: {assignment['assignment_name']}\nDue date: {assignment['due_time']}, 
-                    course name: {assignment['course_name']}, assignment type: {assignment['assignment_type']}, max points: {assignment['max_points']} 
-                    . Return a JSON in a single line with the following information: 
-                    - summary of the assignment (2-3 sentences)
-                    - estimated time it will take to complete the assignment
-                    - estimated difficulty of the assignment (1-5)"""
+                    "text": f"""Analyze this assignment and return a JSON object with the following structure:
+                    {{
+                        "summary": "string with 2 specific sentences about concrete requirements and deliverables",
+                        "estimated_time": "string with time estimate",
+                        "difficulty": number between 1-5
+                    }}
+                    
+                    Rules:
+                    - The summary must focus on specific tasks and requirements
+                    - Do not mention the assignment name or course name
+                    - Do not use generic phrases like 'improve your skills' or 'learn about'
+                    - If information is not available, use "N/A"
+                    
+                    Here's the assignment info: {assignment}"""
                 },
                 {
                     "type": "image_url",
@@ -48,10 +57,24 @@ def summarize_content(assignment: dict, image_path: str, output_file: str) -> st
         max_tokens=500
     )
     
-    # Extract the summary
-    summary = response.choices[0].message.content
+    # Extract the summary and clean it up
+    content = response.choices[0].message.content
+
+    # Remove markdown code block indicators if present
+    content = content.replace('```json', '').replace('```', '').strip()
     
-    # Write the summary to the output file
+    # Write the cleaned JSON to the output file
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write(summary)
-    return summary
+        json.dump(json.loads(content), f, separators=(',', ':'))
+    
+    return content
+
+if __name__ == "__main__": # debugging
+    mydict = {
+        "assignment_name": "Selenium Contest",
+        "due_time": "11/10/24, 11:59 PM",
+        "course_name": "Web Development",
+        "assignment_type": "Quiz",
+        "max_points": "100"
+    }
+    print(summarize_content(mydict, "utils/screenshots/Selenium_Contest.png", "utils/ai_summaries/Selenium_Contest.json"))

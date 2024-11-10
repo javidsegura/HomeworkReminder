@@ -1,7 +1,0 @@
-```json
-{
-  "summary": "Confirm the configuration for your group project, including database access and Azure resource management.",
-  "estimated_time": "1-2 hours",
-  "estimated_difficulty": 3
-}
-```

@@ -1,0 +1,39 @@
+2024-11-10 16:10:35 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-11-10 16:10:55 - INFO - 
+=> SCRAPING DATE: Due date: 11/10/24, 11:59 PM
+2024-11-10 16:10:55 - INFO - 
+2024-11-10 16:10:55 - INFO - 	=> Scraping: Selenium Contest
+2024-11-10 16:10:59 - INFO - 	=> Finished scraping assignment: Selenium Contest
+	--------------------------------
+2024-11-10 16:10:59 - INFO - 
+****************************************************
+
+2024-11-10 16:10:59 - INFO - 
+=> SCRAPING DATE: Due date: 11/13/24, 11:59 PM
+2024-11-10 16:10:59 - INFO - 
+2024-11-10 16:10:59 - INFO - 	=> Scraping: Aggregation Framework Second Exercises
+2024-11-10 16:11:03 - INFO - 	=> Finished scraping assignment: Aggregation Framework Second Exercises
+	--------------------------------
+2024-11-10 16:11:03 - INFO - 
+2024-11-10 16:11:03 - INFO - 	=> Scraping: Spark Assignment
+2024-11-10 16:11:07 - INFO - 	=> Finished scraping assignment: Spark Assignment
+	--------------------------------
+2024-11-10 16:11:07 - INFO - 
+****************************************************
+
+2024-11-10 16:11:07 - INFO - 
+=> SCRAPING DATE: Due date: 11/14/24, 5:00 PM
+2024-11-10 16:11:07 - INFO - 
+2024-11-10 16:11:07 - INFO - 	=> Scraping: Low Code Databases: Airtable
+2024-11-10 16:11:12 - INFO - 	=> Finished scraping assignment: Low Code Databases: Airtable
+	--------------------------------
+2024-11-10 16:11:12 - INFO - 
+****************************************************
+
+2024-11-10 16:11:12 - INFO - 
+=> SCRAPING DATE: Due date: 11/15/24, 11:59 PM
+2024-11-10 16:11:12 - INFO - 
+2024-11-10 16:11:12 - INFO - 	=> Scraping: Introduction to Azure Logic Apps
+2024-11-10 16:11:13 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(54, 'Connection reset by peer')': /session/29ac263d1ca86aba6763b968eaa06b32
+2024-11-10 16:11:13 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10af76fd0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/29ac263d1ca86aba6763b968eaa06b32
+2024-11-10 16:11:13 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10af76510>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/29ac263d1ca86aba6763b968eaa06b32

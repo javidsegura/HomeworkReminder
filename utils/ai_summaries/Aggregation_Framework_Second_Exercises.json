@@ -1,0 +1,1 @@
+{"summary":"Calculate the average age of students using an aggregation pipeline. Group students by city to calculate average grades, filter students based on grade thresholds, and project specific fields in the final output.","estimated_time":"4 hours","difficulty":3}

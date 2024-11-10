@@ -1,8 +1,0 @@
-The content outlines a calendar for November 2024, highlighting important due dates for assignments, including:
-
-- **Spark Assignment** due on November 13, 2024, at 11:59 PM.
-- **Low Code Databases: Airtable** due on November 14, 2024, at 5:00 PM.
-- **Introduction to Azure Logic Apps** due on November 15, 2024, at 11:59 PM.
-- The **Getting Started with Serverless Badge** assessment is due on November 18, 2024, at 11:59 PM, with no attempts remaining and submissions not graded yet. 
-
-The notice emphasizes that submissions cannot be made after the deadline.
