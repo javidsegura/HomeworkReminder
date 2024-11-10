@@ -2,6 +2,10 @@
 
 An automated tool that scrapes assignment information from Blackboard's learning management system, helping students stay organized with their coursework through automated tracking, notifications, and AI-powered summaries.
 
+<p align="center">
+  <img src="utils/imgs/banner.jpg" alt="Blackboard Scraper Banner" width="100%">
+</p>
+
 ## Features
 
 ### 🔐 Automated Login & Session Management
