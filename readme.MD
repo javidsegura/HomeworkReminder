@@ -5,6 +5,15 @@
   </a>
 </p>
 
+# STACK
+- Python
+- Selenium
+- Pandas
+- Pickle
+- Google OAuth
+- OpenAI
+
+
 # Blackboard Assignment Scraper
 
 An automated tool that scrapes assignment information from Blackboard's learning management system, helping students stay organized with their coursework through automated tracking, notifications, and AI-powered summaries.
