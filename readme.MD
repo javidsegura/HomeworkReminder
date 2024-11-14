@@ -1,4 +1,5 @@
-<p align="center"> WATCH DEMO VIDEO:
+# WATCH DEMO VIDEO:
+<p align="center">
   <a href="https://www.youtube.com/watch?v=70l_UOMbAj4">
     <img src="utils/imgs/banner.jpg" alt="Video Demo" width="600">
   </a>
