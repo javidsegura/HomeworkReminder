@@ -37,7 +37,7 @@ Automatically collects comprehensive assignment details:
   ```
 
 ### 🔔 Smart Features
-- Email notifications for new assignments
+- Email notifications for new assignments (daily, weekly and new posts)
 - AI-powered assignment summarization
 - Comprehensive logging system
 - Environment variable support for credentials
