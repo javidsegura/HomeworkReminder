@@ -1,3 +1,5 @@
+[![Video Demo](https://img.youtube.com/vi/70l_UOMbAj4/0.jpg)](https://www.youtube.com/watch?v=70l_UOMbAj4)
+
 # Blackboard Assignment Scraper
 
 An automated tool that scrapes assignment information from Blackboard's learning management system, helping students stay organized with their coursework through automated tracking, notifications, and AI-powered summaries.
