@@ -1,4 +1,8 @@
-[![Video Demo](https://img.youtube.com/vi/70l_UOMbAj4/0.jpg)](https://www.youtube.com/watch?v=70l_UOMbAj4)
+<p align="center"> WATCH DEMO VIDEO:
+  <a href="https://www.youtube.com/watch?v=70l_UOMbAj4">
+    <img src="utils/imgs/banner.jpg" alt="Video Demo" width="600">
+  </a>
+</p>
 
 # Blackboard Assignment Scraper
 
