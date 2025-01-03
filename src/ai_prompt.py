@@ -16,7 +16,7 @@ def summarize_content(assignment: dict, image_path: str, output_file: str) -> st
     messages = [
         {
             "role": "system",
-            "content": "You are a helpful assistant that EXPLAINS WHAT THE ASSIGNMENT IS ABOUT. \
+            "content": "You are a helpful assistant that EXPLAINS WHAT THE ASSIGNMENT IS ABOUT \
             Focus on concrete details and requirements rather than generic descriptions. \
             You must respond with valid JSON only. Avoid mentioning the assignment name, course name, or other metadata that's already provided."
         },
