@@ -95,3 +95,4 @@ Run the scraper:
 python src/main.py
 ```
 
+To be added: front-end with V0 for a whole app explanation
